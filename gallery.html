@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотогалерея</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Мини Соцсеть</h1>
+                <div class="user-info" id="user-info">
+                <!-- Сюда будет вставляться информация о пользователе -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="profile.html" id="profile-link">Мой профиль</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="privacy-settings.html">Настройки</a></li>
+                    <li><a href="friends.html">Друзья</a></li>
+                    <li><a href="#" id="logout-btn">Выйти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container2">
+        <section class="gallery">
+            <h2>Фотогалерея</h2>
+            <div class="gallery-container">
+                <div class="slider">
+
+                    <div class="slide active">
+                        <img src="images/1.jpg">
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/2.webp">
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/3.jpg">
+                    </div>
+
+                      <div class="slide">
+                        <img src="images/4.jpeg">
+                    </div>
+
+                      <div class="slide">
+                        <img src="images/5.jpg">
+                    </div>
+
+                      <div class="slide">
+                        <img src="images/6.jpg">
+                    </div>
+
+                      <div class="slide">
+                        <img src="images/7.jpg">
+                    </div>
+
+                      <div class="slide">
+                        <img src="images/8.jpg">
+                    </div>
+
+                      <div class="slide">
+                        <img src="images/9.jpg">
+                    </div>
+
+                      <div class="slide">
+                        <img src="images/10.jpg">
+                    </div>
+
+                      <div class="slide">
+                        <img src="images/11.jpg">
+                    </div>
+
+                      <div class="slide">
+                        <img src="images/12.webp">
+                    </div>
+
+                </div>
+                <div class="slider-controls">
+                    <button id="prev-btn">Назад</button>
+                    <button id="next-btn">Вперед</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/user-display.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

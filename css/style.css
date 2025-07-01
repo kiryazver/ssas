@@ -1,0 +1,1126 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+
+.container2 {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header {
+    background-color: #4267B2;
+    color: white;
+    padding: 15px 0;
+    border: 0px solid red;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    display: inline-block;
+}
+
+nav ul {
+    list-style: none;
+    justify-content: right;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.box{
+    width: 100%;
+}
+
+
+.im{
+    width: 100%;
+}
+
+/* Стили для страницы профиля */
+.profile-section {
+    padding-bottom: 30px;
+}
+
+.profile-header {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.profile-cover {
+    height: 300px;
+    position: relative;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+    background-color: #4267B2;
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-actions {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.profile-main {
+    display: flex;
+    padding: 0 20px;
+    margin-top: -70px;
+    position: relative;
+    z-index: 2;
+}
+
+.profile-avatar-container {
+    position: relative;
+    margin-right: 20px;
+}
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.avatar-edit-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4267B2;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.profile-info {
+    flex: 1;
+    padding-top: 40px;
+}
+
+.profile-name {
+    margin: 0 0 5px 0;
+    font-size: 1.8em;
+}
+
+.profile-city {
+    margin: 0 0 15px 0;
+    color: #666;
+    font-size: 1.1em;
+}
+
+.profile-stats {
+    display: flex;
+    gap: 30px;
+}
+
+.stat-item {
+    text-align: center;
+    cursor: pointer;
+}
+
+.stat-item:hover .stat-number {
+    color: #4267B2;
+}
+
+.stat-number {
+    font-size: 1.3em;
+    font-weight: bold;
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.profile-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.profile-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.info-item i {
+    width: 25px;
+    color: #4267B2;
+}
+
+.friends-preview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.friend-preview {
+    text-align: center;
+}
+
+.friend-preview-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.friend-preview-name {
+    font-size: 0.8em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.view-all {
+    display: block;
+    text-align: center;
+    color: #4267B2;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.profile-tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    font-size: 1em;
+    color: #666;
+}
+
+.tab-btn.active {
+    color: #4267B2;
+    border-bottom-color: #4267B2;
+    font-weight: bold;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.create-post {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.create-post textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-height: 80px;
+    resize: vertical;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-attachments {
+    display: flex;
+    gap: 10px;
+}
+
+.attachment-btn {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.attachment-btn:hover {
+    color: #4267B2;
+}
+
+.post-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.post-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.post-author-name {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.post-time {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.post-text {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.post-photos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.post-photo-item {
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.post-actions-bar {
+    display: flex;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.post-action {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: #666;
+    cursor: pointer;
+}
+
+.post-action i {
+    margin-right: 5px;
+}
+
+.post-action:hover {
+    color: #4267B2;
+}
+
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.photo-item {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.photo-item:hover {
+    transform: scale(1.03);
+}
+
+.travel-item {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.travel-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.travel-info {
+    flex: 1;
+    padding: 15px;
+}
+
+.travel-title {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.travel-meta {
+    color: #666;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.travel-description {
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.travel-link {
+    color: #4267B2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Адаптивные стили */
+@media (max-width: 992px) {
+    .profile-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-sidebar {
+        order: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: -120px;
+    }
+    
+    .profile-avatar-container {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .profile-stats {
+        justify-content: center;
+    }
+    
+    .profile-actions {
+        position: static;
+        margin-top: 15px;
+        text-align: center;
+    }
+    
+    .friends-preview {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-cover {
+        height: 200px;
+    }
+    
+    .profile-avatar {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .friends-preview {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .photos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .travel-item {
+        flex-direction: column;
+    }
+    
+    .travel-image {
+        width: 100%;
+        height: 150px;
+    }
+}
+
+/* Стили для страницы тревел-блога */
+.travel-section {
+    padding: 20px 0;
+}
+
+.travel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.travel-filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.travel-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.travel-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.travel-map-container {
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+#travel-map {
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.map-legend {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    font-size: 0.9em;
+}
+
+.map-legend h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.legend-icon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.legend-icon.hiking {
+    background-color: #4CAF50;
+}
+
+.legend-icon.city {
+    background-color: #2196F3;
+}
+
+.legend-icon.beach {
+    background-color: #FFC107;
+}
+
+.legend-icon.roadtrip {
+    background-color: #F44336;
+}
+
+.travel-post {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.travel-post:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.post-header {
+    padding: 15px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-meta {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.post-type {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.post-type.hiking {
+    background-color: #E8F5E9;
+    color: #2E7D32;
+}
+
+.post-type.city {
+    background-color: #E3F2FD;
+    color: #1565C0;
+}
+
+.post-type.beach {
+    background-color: #FFF8E1;
+    color: #FF8F00;
+}
+
+.post-type.roadtrip {
+    background-color: #FFEBEE;
+    color: #C62828;
+}
+
+.post-body {
+    padding: 15px;
+}
+
+.post-title {
+    margin-top: 0;
+    color: #333;
+}
+
+.post-description {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.post-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.post-photo {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.post-photo:hover {
+    transform: scale(1.03);
+}
+
+.post-footer {
+    padding: 10px 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-location {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.post-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    margin-left: 10px;
+}
+
+.post-actions button:hover {
+    color: #4267B2;
+}
+
+.empty-posts {
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 40px 0;
+    color: #666;
+}
+
+.empty-posts i {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+.empty-posts p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+/* Модальные окна */
+#travel-map-edit {
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.map-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.map-controls button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.photos-preview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.photo-preview {
+    position: relative;
+    height: 80px;
+}
+
+.photo-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.remove-photo {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(255,0,0,0.7);
+    color: white;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1200px) {
+    .travel-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .travel-map-container {
+        order: -1;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .travel-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .post-photos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .photos-preview {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .post-photos {
+        grid-template-columns: 1fr;
+    }
+    
+    .photos-preview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .post-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+/* Стили для форм авторизации */
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4267B2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #365899;
+}
+
+/* Стили для поиска друзей */
+.search-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-form button {
+    border-radius: 0 4px 4px 0;
+}
+
+.friends-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.friend-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+}
+
+.friend-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Стили для галереи */
+.gallery-container {
+    margin-bottom: 30px;
+}
+
+.slider {
+    width: 100%;
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-controls {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.slider-controls button {
+    margin: 0 10px;
+}
+
+.upload-form {
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+/* Стили для информации о пользователе */
+.user-info {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #f0f0f0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.user-info span {
+    color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+    .user-info {
+        margin-right: 0;
+        order: -1; /* Перемещаем перед кнопкой меню */
+    }
+    
+    .user-name {
+        display: none; /* Скрываем имя на мобильных */
+    }
+}
+
+/* Медиазапросы для адаптивности */
+
+/* Для экранов меньше 992px */
+@media (max-width: 992px) {
+    .container {
+        width: 95%;
+    }
+    
+    nav ul li {
+        margin-left: 15px;
+    }
+    
+    .friends-list {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+}
+
+/* Для экранов меньше 768px (планшеты) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+    
+    header h1 {
+        font-size: 1.5em;
+    }
+    
+    nav ul {
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    nav ul li {
+        display: inline-block;
+        margin: 0 8px;
+    }
+    
+    .slider {
+        height: 300px;
+    }
+    
+    .friends-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+/* Для экранов меньше 576px (мобильные) */
+@media (max-width: 576px) {
+    .auth-container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+    
+    .search-form {
+        flex-direction: column;
+    }
+    
+    .search-form input {
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+    
+    .search-form button {
+        border-radius: 4px;
+    }
+    
+    .slider {
+        height: 200px;
+    }
+    
+    .friends-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .friend-card {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .friend-card img {
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+        margin-bottom: 0;
+    }
+    
+    .slider-controls button {
+        margin: 0 5px;
+        padding: 8px 12px;
+    }
+    
+    .upload-form {
+        padding-top: 15px;
+    }
+    
+    .upload-form h3 {
+        font-size: 1em;
+    }
+}
+
+/* Для очень маленьких экранов (меньше 400px) */
+@media (max-width: 400px) {
+    nav ul li {
+        margin: 0 5px;
+    }
+    
+    nav ul li a {
+        font-size: 0.9em;
+    }
+    
+    .slider {
+        height: 150px;
+    }
+    
+    .friend-card {
+        padding: 10px;
+    }
+    
+    .friend-card h3 {
+        font-size: 1em;
+        margin: 0 0 5px 0;
+    }
+    
+    .friend-card p {
+        font-size: 0.9em;
+        margin: 0 0 5px 0;
+    }
+    
+    .add-friend-btn {
+        font-size: 0.8em;
+        padding: 5px 8px;
+    }
+}

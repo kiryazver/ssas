@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация | Мини Соцсеть</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        :root {
+            --primary: #4267B2;
+            --secondary: #898F9C;
+            --light: #f0f2f5;
+            --dark: #1c1e21;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .register-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            overflow: hidden;
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        .register-header {
+            background: var(--primary);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .register-header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        
+        .register-header p {
+            margin: 10px 0 0;
+            opacity: 0.9;
+        }
+        
+        .register-body {
+            padding: 30px;
+        }
+        
+        .register-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .form-group {
+            position: relative;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 14px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(66, 103, 178, 0.2);
+            outline: none;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        .register-button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        
+        .register-button:hover {
+            background: #365899;
+        }
+        
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .login-link a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+        
+        .terms {
+            font-size: 14px;
+            color: var(--secondary);
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .terms a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 480px) {
+            .register-container {
+                max-width: 100%;
+            }
+            
+            .register-body {
+                padding: 20px;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-header">
+            <h1>Создайте аккаунт</h1>
+            <p>Присоединяйтесь к нашей социальной сети</p>
+        </div>
+        
+        <div class="register-body">
+            <form id="register-form" class="register-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reg-name">Имя</label>
+                        <input type="text" id="reg-name" required placeholder="Введите ваше имя">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reg-city">Город</label>
+                        <input type="text" id="reg-city" placeholder="Введите ваш город">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" required placeholder="Введите ваш email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="reg-password">Пароль</label>
+                    <input type="password" id="reg-password" required placeholder="Создайте пароль">
+                </div>
+                
+                <div class="form-group">
+                    <label for="reg-confirm-password">Подтвердите пароль</label>
+                    <input type="password" id="reg-confirm-password" required placeholder="Повторите пароль">
+                </div>
+                
+                <button type="submit" class="register-button">Зарегистрироваться</button>
+            </form>
+            
+            <div class="terms">
+                Нажимая "Зарегистрироваться", вы соглашаетесь с нашими 
+                <a href="#">Условиями использования</a> и 
+                <a href="#">Политикой конфиденциальности</a>
+            </div>
+            
+            <div class="login-link">
+                <p>Уже есть аккаунт? <a href="login.html">Войти</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

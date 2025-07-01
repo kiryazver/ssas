@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой профиль | Мини Соцсеть</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-flex">
+                <h1>Мини Соцсеть</h1>
+                <div class="user-info" id="user-info"></div>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="profile.html">Мой профиль</a></li>
+                    <li><a href="friends.html">Друзья</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="privacy-settings.html">Настройки</a></li>
+                    <li><a href="#" id="logout-btn">Выйти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="profile-section">
+            <div class="profile-header">
+                <div class="profile-cover">
+                    <div class="cover-image" id="cover-image">
+                        <!-- Фон профиля -->
+                    </div>
+                    <div class="profile-actions">
+                        <button id="change-cover-btn" class="btn-secondary">
+                            <i class="fas fa-camera"></i> Изменить обложку
+                        </button>
+                        <input type="file" id="cover-upload" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+                <div class="profile-main">
+                    <div class="profile-avatar-container">
+                        <img src="https://i.pinimg.com/originals/61/3a/90/613a9073798753bf164ce3a3681a10a7.png" alt="Аватар" class="profile-avatar" id="profile-avatar">
+                        <button id="change-avatar-btn" class="avatar-edit-btn">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                        <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
+                    </div>
+                    <div class="profile-info">
+                        <h1 id="profile-name"></h1>
+                        <p class="profile-city" id="profile-city"></p>
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" id="friends-count">0</span>
+                                <span class="stat-label">Друзей</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="photos-count">0</span>
+                                <span class="stat-label">Фото</span>
+                            </div>
+                            <div class="stat-item">
+                                <a href="travel.html"><span class="stat-number" id="travels-count">0</span></a>
+                                <span class="stat-label">Путешествий</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-content">
+                <div class="profile-sidebar">
+                    <div class="profile-card">
+                        <h3>Информация</h3>
+                        <div class="info-item">
+                            <i class="fas fa-birthday-cake"></i>
+                            <span id="profile-age">Не указано</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span id="profile-email"></span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span id="profile-phone">Не указано</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-globe-europe"></i>
+                            <span id="profile-country">Не указано</span>
+                        </div>
+                        <button id="edit-profile-btn" class="btn-secondary">
+                            <i class="fas fa-edit"></i> Редактировать профиль
+                        </button>
+                    </div>
+
+                    <div class="profile-card">
+                        <h3>Друзья</h3>
+                        <div class="friends-preview" id="friends-preview">
+                            <!-- Будет загружено через JS -->
+                        </div>
+                        <a href="friends.html" class="view-all">Показать всех</a>
+                    </div>
+                </div>
+
+                <div class="profile-main-content">
+                    <div class="profile-tabs">
+                        <button class="tab-btn active" data-tab="posts">Мои записи</button>
+                        <button class="tab-btn" data-tab="photos">Фотографии</button>
+                        <button class="tab-btn" data-tab="travel">Путешествия</button>
+                    </div>
+
+                    <div class="tab-content active" id="posts-tab">
+                        <div class="create-post">
+                            <textarea placeholder="Что у вас нового?" id="post-text"></textarea>
+                            <div class="post-actions">
+                                <div class="post-attachments">
+                                    <button class="attachment-btn" data-type="photo">
+                                        <i class="fas fa-image"></i>
+                                    </button>
+                                    <button class="attachment-btn" data-type="location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </button>
+                                    <input type="file" id="post-photo-upload" multiple accept="image/*" style="display: none;">
+                                </div>
+                                <button id="publish-post-btn" class="btn-primary">Опубликовать</button>
+                            </div>
+                        </div>
+
+                        <div class="posts-list" id="posts-list">
+                            <!-- Посты будут загружены через JS -->
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="photos-tab">
+                        <div class="photos-grid" id="photos-grid">
+                            <!-- Фото будут загружены через JS -->
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="travel-tab">
+                        <div class="travel-list" id="travel-list">
+                            <!-- Путешествия будут загружены через JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Модальное окно редактирования профиля -->
+    <div id="edit-profile-modal" class="modal">
+        <div class="modal-content">
+            <form id="edit-profile-form">
+                <div class="form-group">
+               
+                </div>
+                <div class="form-group">
+                  
+                </div>
+                <div class="form-group">
+              
+                </div>
+                <div class="form-group">
+                 
+                </div>
+                <div class="form-group">
+                
+                </div>
+                <div class="form-group">
+           
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/user-display.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>
